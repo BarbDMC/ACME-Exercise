@@ -1,0 +1,22 @@
+{
+  "name": "acme-exercise-ioet",
+  "version": "1.0.0",
+  "description": "Programming exercise from Ioet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarbDMC/ACME-Exercise-Ioet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BarbDMC/ACME-Exercise-Ioet/issues"
+  },
+  "homepage": "https://github.com/BarbDMC/ACME-Exercise-Ioet#readme",
+  "dependencies": {
+    "jest": "^29.1.1"
+  }
+}
