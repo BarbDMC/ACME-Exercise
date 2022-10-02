@@ -1,3 +1,5 @@
+'use strict';
+
 describe('When use formatEmployeesData function', () => {
   const schedulesPerEmployee = require('../utils/schedulesPerEmployee');  
 

@@ -1,3 +1,4 @@
+'use strict';
 
 module.exports = (file) => {  
   const employeesSchedules = {};

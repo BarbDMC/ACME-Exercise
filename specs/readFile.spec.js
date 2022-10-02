@@ -1,3 +1,5 @@
+'use strict';
+
 describe('When use readFile function', () => {
   const readFile = require('../utils/readFile');  
 
