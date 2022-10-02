@@ -1,7 +1,9 @@
 const fs = require('fs');
+const path = require('path');
 
-module.exports = async () => {  
-  const fileReaded = await fs.readFileSync('./data.txt', 'utf-8', (err, data) => {
+module.exports = async (pathFile) => {  
+  const filePath = path.join(__dirname, pathFile);
+  const fileReaded = await fs.readFileSync(filePath, 'utf-8', (err, data) => {
     if (err) throw err;
   });
   

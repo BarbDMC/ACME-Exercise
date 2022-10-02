@@ -5,10 +5,8 @@ module.exports = (file) => {
   const splitSpaces = file.split('\n');
   let splitPerName = splitSpaces.map((text) => {
       return text.split('=');
-  });
+  }).flat();
     
-  splitPerName = splitPerName.flat();
-
   splitPerName.reduce((previousValue, currentValue, index) => {
     if (index % 2 !== 0) {
       const days = currentValue.match(/([A-Z]{2})/g);
