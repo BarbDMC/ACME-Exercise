@@ -7,12 +7,12 @@ describe('When use getAllSchedules function', () => {
   it('Should format the employees data', async () => {
     const allShedules = getAllSchedules(employeesSchedules);
 
-    expect(allShedules[0]).toEqual({employee: 'ASTRID', day: 'MO', start_time: '10:00', end_time: '12:00'});
-    expect(allShedules[1]).toEqual({employee: 'ASTRID', day: 'TH', start_time: '12:00', end_time: '14:00'});
-    expect(allShedules[2]).toEqual({employee: 'ASTRID', day: 'SU', start_time: '20:00', end_time: '21:00'});
+    expect(allShedules[0]).toEqual({employee: 'ASTRID', day: 'MO', startTime: '10:00', endTime: '12:00'});
+    expect(allShedules[1]).toEqual({employee: 'ASTRID', day: 'TH', startTime: '12:00', endTime: '14:00'});
+    expect(allShedules[2]).toEqual({employee: 'ASTRID', day: 'SU', startTime: '20:00', endTime: '21:00'});
 
-    expect(allShedules[3]).toEqual({employee: 'BARBARA', day: 'MO', start_time: '10:00', end_time: '12:00'});
-    expect(allShedules[4]).toEqual({employee: 'BARBARA', day: 'TH', start_time: '01:00', end_time: '03:00'});
-    expect(allShedules[5]).toEqual({employee: 'BARBARA', day: 'SU', start_time: '20:00', end_time: '21:00'});
+    expect(allShedules[3]).toEqual({employee: 'BARBARA', day: 'MO', startTime: '10:00', endTime: '12:00'});
+    expect(allShedules[4]).toEqual({employee: 'BARBARA', day: 'TH', startTime: '01:00', endTime: '03:00'});
+    expect(allShedules[5]).toEqual({employee: 'BARBARA', day: 'SU', startTime: '20:00', endTime: '21:00'});
   });
 });

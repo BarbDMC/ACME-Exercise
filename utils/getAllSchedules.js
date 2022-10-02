@@ -7,12 +7,12 @@ module.exports = (employeesSchedules) => {
     const employeeSchedule = employeesSchedules[employee];
     const days = Object.keys(employeeSchedule);
     const checkIns = days.map((day) => {
-      const { start_time, end_time } = employeeSchedule[day];
+      const { startTime, endTime } = employeeSchedule[day];
       return {
         employee,
         day,
-        start_time,
-        end_time,
+        startTime,
+        endTime,
       };
     });
     return checkIns;

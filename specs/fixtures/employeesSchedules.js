@@ -2,13 +2,13 @@
 
 exports.employeesSchedules = {
   ASTRID: {
-    MO: { start_time: '10:00', end_time: '12:00' },
-    TH: { start_time: '12:00', end_time: '14:00' },
-    SU: { start_time: '20:00', end_time: '21:00' },
+    MO: { startTime: '10:00', endTime: '12:00' },
+    TH: { startTime: '12:00', endTime: '14:00' },
+    SU: { startTime: '20:00', endTime: '21:00' },
   },
   BARBARA: {
-    MO: { start_time: '10:00', end_time: '12:00' },
-    TH: { start_time: '01:00', end_time: '03:00' },
-    SU: { start_time: '20:00', end_time: '21:00' },
+    MO: { startTime: '10:00', endTime: '12:00' },
+    TH: { startTime: '01:00', endTime: '03:00' },
+    SU: { startTime: '20:00', endTime: '21:00' },
   }
 };

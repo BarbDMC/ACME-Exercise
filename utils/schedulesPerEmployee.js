@@ -17,15 +17,15 @@ module.exports = (file) => {
       days.forEach((day, index) => {
           daysHours[day] = {}
           if (index === 0) {
-              daysHours[day]['start_time'] = hours[0]
-              daysHours[day]['end_time'] = hours[1]
+              daysHours[day]['startTime'] = hours[0]
+              daysHours[day]['endTime'] = hours[1]
           }
           
           if (index > 0) {
-              const start_time_position = index * 2;
-              const end_time_position = (index * 2) + 1;
-              daysHours[day]['start_time'] = hours[start_time_position]
-              daysHours[day]['end_time'] = hours[end_time_position]
+              const startTimePosition = index * 2;
+              const endTimePosition = (index * 2) + 1;
+              daysHours[day]['startTime'] = hours[startTimePosition]
+              daysHours[day]['endTime'] = hours[endTimePosition]
           }
           
       });
