@@ -1,45 +1,38 @@
+'use strict';
+
 const readFile = require('./utils/readFile'); 
 const schedulesPerEmployee = require('./utils/schedulesPerEmployee');
 const getAllSchedules = require('./utils/getAllSchedules');
+const checkEmployeesTimeMatches = require('./utils/checkEmployeesTimeMatches');
 
 module.exports = async (path) => { 
-  let coincidences = {};
+  const matches = {};
   const fileReaded = await readFile(path);
   const employeesSchedules = schedulesPerEmployee(fileReaded);
   const allSchedules = getAllSchedules(employeesSchedules);
   
   allSchedules.forEach((schedule) => {
-    const employees = Object.keys(employeesSchedules);
+    const {employee, day, startTime, endTime } = schedule;
+    const coincidences = checkEmployeesTimeMatches(day, startTime, endTime, employeesSchedules);
+      
+    coincidences.forEach((coincidence) => {
+      if (employee === coincidence) return;
 
-    const employeesCoincided = employees.filter(employee => {
-      const employeeSchedule = employeesSchedules[employee];
-      const employeeDay = employeeSchedule[schedule.day];
+      const pairKey = `${employee}-${coincidence}`;
 
-      if (employeeDay) {
-        const { startTime, endTime } = employeeDay;
-
-        return startTime === schedule.startTime
-        && endTime === schedule.endTime;
+      if (!matches[pairKey]) {
+        matches[pairKey] = [];
       }
 
-      return false;
+      matches[pairKey].push(`${day}-${startTime}-${endTime}`);
     });
-    
-    if (employeesCoincided.length > 1) {
-      if (coincidences[`${employeesCoincided[0]}-${employeesCoincided[1]}`]) {
-        coincidences[`${employeesCoincided[0]}-${employeesCoincided[1]}`] += 0.5;
-      }
-
-      if (!coincidences[`${employeesCoincided[0]}-${employeesCoincided[1]}`]) {
-        coincidences[`${employeesCoincided[0]}-${employeesCoincided[1]}`] = 0.5;
-      }
-    }
   });
 
-  const allCoincidences = Object.keys(coincidences).map(coincidence => {
-    return `${coincidence}: ${coincidences[coincidence]}`;
+  const allMatches = Object.keys(matches).map(match => {
+    return `${match}: ${matches[match].length}`;
   });
+  
+  console.log('allMatches', allMatches)
 
-  console.log('allCoincidences', allCoincidences);
-  return allCoincidences;
+  return allMatches;
 };
