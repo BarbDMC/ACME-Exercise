@@ -4,7 +4,7 @@ describe('When use getAllSchedules function', () => {
   const getAllSchedules = require('../utils/getAllSchedules');
   const {employeesSchedules} =  require('./fixtures/employeesSchedules');
 
-  it('Should format the schedules per employee', async () => {
+  it('Should format the schedules per employee', () => {
     const allShedules = getAllSchedules(employeesSchedules);
 
     expect(allShedules[0]).toEqual({employee: 'ASTRID', day: 'MO', startTime: '10:00', endTime: '12:00'});

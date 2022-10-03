@@ -3,7 +3,7 @@
 describe('When use formatEmployeesData function', () => {
   const schedulesPerEmployee = require('../utils/schedulesPerEmployee');  
 
-  it('Should format the employees data', async () => {
+  it('Should format the employees data', () => {
     const readedFile = `ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00 \nBARBARA=MO10:00-12:00,TH01:00-03:00,SU20:00-21:00`;
     const employeesShedules = schedulesPerEmployee(readedFile);
 

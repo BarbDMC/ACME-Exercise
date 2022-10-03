@@ -1,13 +1,13 @@
 'use strict';
 
-const readFile = require('./utils/readFile'); 
-const schedulesPerEmployee = require('./utils/schedulesPerEmployee');
-const getAllSchedules = require('./utils/getAllSchedules');
-const checkEmployeesTimeMatches = require('./utils/checkEmployeesTimeMatches');
+const readFile = require('./readFile'); 
+const schedulesPerEmployee = require('./schedulesPerEmployee');
+const getAllSchedules = require('./getAllSchedules');
+const checkEmployeesTimeMatches = require('./checkEmployeesTimeMatches');
 
-module.exports = async (path) => { 
+module.exports = (path) => { 
   const matches = {};
-  const fileReaded = await readFile(path);
+  const fileReaded = readFile(path);
   const employeesSchedules = schedulesPerEmployee(fileReaded);
   const allSchedules = getAllSchedules(employeesSchedules);
   
@@ -32,7 +32,5 @@ module.exports = async (path) => {
     return `${match}: ${matches[match].length}`;
   });
   
-  console.log('allMatches', allMatches);
-
   return allMatches;
 };

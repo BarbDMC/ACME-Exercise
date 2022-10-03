@@ -39,7 +39,7 @@ RENE-ANDRES: 2
 `├──` **`utils`**  _folder with all reusable functions_  
 `└── .gitignore`  
 `└── README.md` _The main readme_  
-`└── countEmployeesCoincided.js` _main javascript file_  
+`└── app.js` _main javascript file_  
 `└── data.txt`  _input text file_  
 `└── package.json`
 
@@ -58,3 +58,7 @@ The project was design with TDD methodology (Test Driven Domain), creating the s
 ### Run tests
 
  - Use the command: `npm test`
+
+ ### Run project
+
+ - Run: `node app.js`
