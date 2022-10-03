@@ -35,13 +35,13 @@ RENE-ANDRES: 2
  
 ## Architecture
 .  
-`├──` **`specs`**   _folder with all project specs_
+`├──` **`specs`**   _folder with all project specs_  
 `├──` **`utils`**  _folder with all reusable functions_  
-`└──` **`.gitignore`**
-`└──` **`README.md`**  _The main readme_
-`└──` **`countEmployeesCoincided.js`**   _javaScript _
-`└──` **`data.txt`**  _input text file_ 
-`└──` **` package.json`**
+`└── .gitignore`  
+`└── README.md` _The main readme_  
+`└── countEmployeesCoincided.js` _main javascript file_  
+`└── data.txt`  _input text file_  
+`└── package.json`
 
 ## Approach and Methodology
 
