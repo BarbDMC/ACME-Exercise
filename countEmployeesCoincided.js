@@ -32,7 +32,7 @@ module.exports = async (path) => {
     return `${match}: ${matches[match].length}`;
   });
   
-  console.log('allMatches', allMatches)
+  console.log('allMatches', allMatches);
 
   return allMatches;
 };

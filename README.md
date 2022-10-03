@@ -8,13 +8,13 @@ The company ACME offers their employees the flexibility to work the hours they w
   
 The goal of this exercise is to output a table containing pairs of employees and how often they have coincided in the office. The following abbreviations will be used for entering data:
   
-- MO: Monday  
-- TU: Tuesday  
-- WE: Wednesday  
-- TH: Thursday   
-- FR: Friday 
-- SA: Saturday   
-- SU: Sunday
+ - MO: Monday  
+ -  TU: Tuesday  
+ -  WE: Wednesday  
+ -  TH: Thursday   
+ - FR: Friday 
+ - SA: Saturday   
+ - SU: Sunday
   
 
 Input: the name of an employee and the schedule they worked, indicating the time and hours. This should be a .txt file with at least five sets of data. You can include the data from our examples below:
@@ -34,7 +34,14 @@ RENE-ANDRES: 2
   
  
 ## Architecture
-
+.  
+`├──` **`specs`**   _folder with all project specs_
+`├──` **`utils`**  _folder with all reusable functions_  
+`└──` **`.gitignore`**
+`└──` **`README.md`**  _The main readme_
+`└──` **`countEmployeesCoincided.js`**   _javaScript _
+`└──` **`data.txt`**  _input text file_ 
+`└──` **` package.json`**
 
 ## Approach and Methodology
 
@@ -51,6 +58,3 @@ The project was design with TDD methodology (Test Driven Domain), creating the s
 ### Run tests
 
  - Use the command: `npm test`
-
-### How to run project
-
