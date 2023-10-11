@@ -1,4 +1,4 @@
-# Acme-Exercise-Ioet
+# Acme-Exercise
 
 Exercise in JavaScript that counts the pairs of employees and how often they have coincided in the office depending of day and hours that it worked.
 
